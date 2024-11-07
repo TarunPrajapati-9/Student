@@ -1,7 +1,8 @@
+import { ConcernSchema } from "@/pages/CompanyDetail";
 import axios, { AxiosError } from "axios";
 import Cookies from "js-cookie";
 
-export async function setConsent(params: FormData, consentId: string) {
+export async function setConsent(params: ConcernSchema, consentId: string) {
   try {
     const token = Cookies.get("studentToken");
     const url = `${import.meta.env.VITE_BACKEND_URL}/set/concern/${consentId}`;
